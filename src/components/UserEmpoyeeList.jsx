@@ -11,7 +11,7 @@ const UserEmpoyeeList = () => {
     }, [])
 
     const loadEmployee = () => {
-        axios.get('http://localhost:3001/viewemployee')
+        axios.get('/api/viewemployee')
             .then(
                 (res) => {
                     console.log(res.data)

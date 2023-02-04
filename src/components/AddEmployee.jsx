@@ -25,7 +25,7 @@ const AddEmployee = () => {
     }
 
     const readValue = () => {
-        axios.post('http://localhost:3001/addemployee', data)
+        axios.post('/api/addemployee', data)
             .then((response) => {
                 console.log(response.data)
                 if (response.data.status == "Success") {

@@ -12,7 +12,7 @@ const EmployeeList = () => {
     }, [])
 
     const loadEmployee = () => {
-        axios.get('http://localhost:3001/viewemployee')
+        axios.get('/api/viewemployee')
             .then(
                 (res) => {
                     console.log(res.data)
@@ -27,7 +27,7 @@ const EmployeeList = () => {
         console.log(empid)
         console.log("delete " + { _id: empid })
 
-        axios.delete('http://localhost:3001/deleteEmployee/' + empid)
+        axios.delete('/api/deleteEmployee/' + empid)
             .then((res) => {
                 console.log(res.status)
                 if (res.status == 200) {

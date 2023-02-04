@@ -21,7 +21,7 @@ const Signin = () => {
 
     const signinData = () => {
 
-        axios.post("http://localhost:3001/signin", data)
+        axios.post("/api/signin", data)
 
             .then((response) => {
                 const [admindata] = response.data.Data

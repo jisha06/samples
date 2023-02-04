@@ -23,7 +23,7 @@ const EditEmployee = () => {
     const loadEmployee = () => {
        
         console.log(empid)
-        axios.post('http://localhost:3001/getemployee', {"_id":empid})
+        axios.post('/api/getemployee', {"_id":empid})
             .then(
                 (res) => {
                     console.log(res.data.name)
@@ -43,7 +43,7 @@ const EditEmployee = () => {
         const _id = empid
         const empdata = { _id, name, emailid, location, designation, salary };
         console.log(empdata)
-        axios.put('http://localhost:3001/updateEmployee', empdata)
+        axios.put('/api/updateEmployee', empdata)
             .then((response) => {
                 console.log(response.data.status)
                 if (response.data.status == "Success") {
